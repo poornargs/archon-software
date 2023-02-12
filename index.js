@@ -22,5 +22,5 @@ app.use(express.static("archon"));
 
 
 app.listen(SERVER_PORT, process.env.HOST || "0.0.0.0", () => {
-    console.log(`Example app listening on port ${port}, host on ${JSON.stringify(app.listen().address())}`)
+    console.log(`Example app listening on port ${SERVER_PORT}, host on ${JSON.stringify(app.listen().address())}`)
 })

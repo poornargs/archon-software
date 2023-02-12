@@ -9,7 +9,7 @@ require('dotenv').config()
 let { SERVER_PORT } = process.env;
 
 
-SERVER_PORT = SERVER_PORT || 6565;
+SERVER_PORT = SERVER_PORT || 6655;
 
 // let SERVER_PORT = 6655;
 

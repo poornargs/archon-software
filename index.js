@@ -23,7 +23,11 @@ app.use(cors());
 app.use(express.static("archon"));
 
 
-// Start the server
-app.listen(SERVER_PORT, function () {
-    console.log("Listening on port " + SERVER_PORT + ".");
-});
+// // Start the server
+// app.listen(SERVER_PORT, function () {
+//     console.log("Listening on port " + SERVER_PORT + ".");
+// });
+
+app.listen(port, process.env.HOST || "0.0.0.0", () => {
+    console.log(`Example app listening on port ${port}, host on ${JSON.stringify(app.listen().address())}`)
+})

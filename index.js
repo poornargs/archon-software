@@ -2,7 +2,16 @@
 var express = require("express");
 const cors = require('cors');
 
-let SERVER_PORT = 6655;
+require('dotenv').config()
+
+// console.log(process.env)
+
+let { SERVER_PORT } = process.env;
+
+
+SERVER_PORT = SERVER_PORT || 6565;
+
+// let SERVER_PORT = 6655;
 
 // Initialize Express
 var app = express();

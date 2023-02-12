@@ -21,6 +21,6 @@ app.use(cors());
 app.use(express.static("archon"));
 
 
-app.listen(port, process.env.HOST || "0.0.0.0", () => {
+app.listen(SERVER_PORT, process.env.HOST || "0.0.0.0", () => {
     console.log(`Example app listening on port ${port}, host on ${JSON.stringify(app.listen().address())}`)
 })

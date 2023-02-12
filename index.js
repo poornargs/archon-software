@@ -6,10 +6,10 @@ require('dotenv').config()
 
 // console.log(process.env)
 
-let { SERVER_PORT } = process.env;
+let { PORT } = process.env;
 
 
-SERVER_PORT = SERVER_PORT || 6655;
+PORT = PORT || 6655;
 
 // Initialize Express
 var app = express();
@@ -21,6 +21,6 @@ app.use(cors());
 app.use(express.static("archon"));
 
 
-app.listen(SERVER_PORT, process.env.HOST || "0.0.0.0", () => {
-    console.log(`Example app listening on port ${SERVER_PORT}, host on ${JSON.stringify(app.listen().address())}`)
+app.listen(PORT, process.env.HOST || "0.0.0.0", () => {
+    console.log(`Example app listening on port ${PORT}, host on ${JSON.stringify(app.listen().address())}`)
 })
